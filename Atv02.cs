@@ -53,6 +53,7 @@ public static class Atv02
 
         Console.WriteLine($"Quantidade de compras registradas: {quantidadeCompras}");
         Console.WriteLine($"Total arrecadado: R$ {totalArrecadado}");
+        Console.WriteLine($"Média das compras: R$ {totalArrecadado / quantidadeCompras}");
     }
 }
 
