@@ -9,3 +9,31 @@ Regras:
 - apresentar cada operação de forma organizada
 - mostrar a tabuada completa do número informado pelo usuário
 */
+
+public static class Atv05
+{
+    public static void Executar()
+    {
+        int numero;
+        int multiplicador;
+
+        do
+        {
+            Console.Write("Digite um número para fazer sua tabuada (ou um número negativo para sair):\n-> ");
+            numero = int.Parse(Console.ReadLine()!);
+            Console.Clear();
+            if (numero >= 0)
+            {
+                Console.WriteLine($"Tabuada do {numero}\n");
+                multiplicador = 1;
+
+                while (multiplicador <= 10)
+                {
+                    Console.WriteLine($"{numero} x {multiplicador} = {numero * multiplicador}");
+                    multiplicador++;
+                }
+                Console.WriteLine();
+            }
+        } while (numero >= 0);
+    }
+}
