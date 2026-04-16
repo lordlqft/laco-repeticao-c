@@ -14,3 +14,22 @@ Observação: Vestigios de uso de IA, atividade zerada,
 ou código copiado de terceiros sem a devida citação, serão penalizados.
 
 */
+
+public static class Atv04
+{
+    public static void Executar()
+    {
+        int numero;
+        int multiplicador = 1;
+
+        Console.Write("Digite um número para fazer sua tabuada:\n-> ");
+        numero = int.Parse(Console.ReadLine()!);
+        Console.WriteLine($"Tabuada do {numero}\n");
+
+        while (multiplicador <= 10)
+        {
+            Console.WriteLine($"{numero} x {multiplicador} = {numero * multiplicador}");
+            multiplicador++;
+        }
+    }
+}
