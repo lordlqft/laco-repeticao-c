@@ -20,6 +20,39 @@ public static class Atv03
 {
     public static void Executar()
     {
+        string placa = "";
+        int quantidadeVeiculos = 0;
+        string continuar = "s";
+        int opcao;
 
+        Console.Clear();
+        Console.Write("Deseja iniciar o registro de veículos?\n1. Sim\n 2. Não\n\n->");
+        opcao = int.Parse(Console.ReadLine()!);
+
+        while (continuar == "s")
+        {
+            if (opcao == 1)
+            {
+                Consol.Write("Digite a placa do veículo: ");
+                placa = Console.ReadLine()!;
+                quantidadeVeiculos++;
+                Console.Clear();
+                Console.Write("Deseja registrar outro veículo? (s/n)\n->");
+                continuar = Console.ReadLine()!;.ToLower();
+                Console.Clear();
+
+                if (continuar == "n")
+                {
+                    Console.WriteLine($"Quantidade total de veículos registrados: {quantidadeVeiculos}");
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Registro de veículos encerrado.");
+                Console.WriteLine($"Quantidade total de veículos registrados: {quantidadeVeiculos}");
+                break;
+            }
+        }
     }
 }
